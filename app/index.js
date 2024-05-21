@@ -3,7 +3,7 @@ const app = express()
 const port = 8000
 
 
-app.get('/emps', (req, res) => {
+app.get('/api/emps', (req, res) => {
     res.json({uzenet : 'Expressben programozok'})
     console.log('bruh')
 })
