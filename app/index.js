@@ -1,12 +1,14 @@
 const express = require('express')
+const router = require('./routes')
+
+
 const app = express()
 const port = 8000
 
 
-app.get('/api/emps', (req, res) => {
-    res.json({uzenet : 'Expressben programozok'})
-    console.log('bruh')
-})
+// app.use(express.json())
+
+app.use('/api', router)
 
 app.listen(port, () => {
     console.log(`fut (localhost:${port})`)
